@@ -1,0 +1,30 @@
+{
+  "2": {
+    "name": "Youtube",
+
+    "base": "https://gdata.youtube.com/feeds/api",
+    "params": {
+      "v": "2"
+    },
+    "keyAsParam": "key",
+
+    "formats": {
+      "xml": {},
+      "json": {"params": {"alt": "jsonc"}}
+    },
+
+    "auth": {
+      "oauth": {
+        "version": "1.0",
+        "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
+        "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
+        "authorizeEndpoint": "http://www.youtube.com/oauth_authorize_token",
+        "emptyCallback": "oob",
+        "params": {
+          "scope": ["http://gdata.youtube.com"]
+        },
+        "scopeSeparator": " "
+      }
+    }
+  }
+}

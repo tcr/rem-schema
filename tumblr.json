@@ -1,0 +1,8 @@
+{
+"2": {
+  "name": "Tumblr",
+
+  "base": "http://api.tumblr.com/v2",
+  "keyAsParam": "api_key"
+}
+}

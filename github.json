@@ -1,0 +1,7 @@
+{
+  "1": {
+    "name": "Github",
+
+    "base": "https://api.github.com"
+  }
+}

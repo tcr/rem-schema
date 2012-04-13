@@ -1,0 +1,9 @@
+{
+  "1": {
+    "name": "Nonolith Cee",
+
+    "postType": "form",
+
+    "base": "http://localhost:9003/rest/v1"
+  }
+}

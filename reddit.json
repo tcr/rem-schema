@@ -1,0 +1,21 @@
+{
+  "1": {
+    "name": "Reddit",
+    "docs": "https://github.com/reddit/reddit/wiki/API",
+
+    "base": "http://www.reddit.com",
+    "postType": "form",
+    "robotsTxt": false,
+
+    "formats": {
+      "xml": {"suffix": ".xml"},
+      "json": {"suffix": ".json"}
+    },
+
+    "auth": {
+      "session": {
+        "cookies": ["reddit_session"]
+      }
+    }
+  }
+}
