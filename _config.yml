@@ -1,3 +1,4 @@
 auto: true
-markdown: rdiscount
+pygments: true
+markdown: redcarpet
 permalink: /:year/:month/:day/:title
