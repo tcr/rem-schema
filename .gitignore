@@ -1,0 +1,6 @@
+# mac stuff
+.DS_Store
+
+# emacs stuff
+*~
+\#*
