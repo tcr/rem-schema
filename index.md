@@ -5,9 +5,9 @@ title: REM, REST made easy
 
 ### REST easy.
 
-Markdown!!!
+Markdown.
 
-```javascript
+``` javascript
 tw('search').get({q: 'fleetwood mac', rpp: 5}, function(err, json) {
     console.log('There are', json.results.length, 'results for Fleetwood Mac. #awesome');
 });
