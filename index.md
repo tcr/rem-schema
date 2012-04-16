@@ -1,6 +1,8 @@
 ---
 layout: layout
-title: REM, REST made easy
+project: REM
+link: https://github.com/timcameronryan/rem
+title: REST made easy
 ---
 
 ## REST easy.
