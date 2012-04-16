@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>REM, REST made easy</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Rem</h1>
+        <p>REM, REST made easy.</p>
+        <!--
+        <p class="view"><a href="https://github.com/timcameronryan/rem">View the Project on GitHub <small>timcameronryan/rem</small></a></p>
+      -->
+        <ul>
+          <!--
+          <li><a href="https://github.com/timcameronryan/rem/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/timcameronryan/rem/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          -->
+          <li><a href="https://github.com/timcameronryan/rem">View On <strong>GitHub</strong></a></li>
+        </ul>
+        <p>See more projects by <a href="https://github.com/timcameronryan">timcameronryan</a> at <a href="http://tcr.io/"><b>tcr.io</b></a></p>
+      </header>
+      <section>
+<h2>REST easy.</h2>
+
+<p>REM is a minimal library to consume REST APIs, constructed around simple
+language idioms and manifests for popular libraries that alleviate
+differences between between configuration, authentication, and formats.
+Getting started with REM is quick and easy.</p>
+
+<p>REM includes <a href="https://github.com/timcameronryan/rem">configurations for several popular APIs</a>.</p>
+
+<h3>REM for Node</h3>
+
+<p>Getting started with a particular API is as simple is specifying the name and API version:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">rem</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;rem&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tw</span> <span class="o">=</span> <span class="nx">rem</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="s1">&#39;twitter&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;KEY&#39;</span><span class="p">,</span> <span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;SECRET&#39;</span><span class="p">})</span>
+<span class="c1">// Get started with https://api.twitter.com/1</span>
+</code></pre>
+</div>
+
+<p>You can make API requests simply:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">tw</span><span class="p">(</span><span class="s1">&#39;search&#39;</span><span class="p">).</span><span class="nx">get</span><span class="p">({</span><span class="nx">q</span><span class="o">:</span> <span class="s1">&#39;fleetwood mac&#39;</span><span class="p">,</span> <span class="nx">rpp</span><span class="o">:</span> <span class="mi">5</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="nx">json</span><span class="p">.</span><span class="nx">results</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="s1">&#39;results for Fleetwood Mac. #awesome&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="c1">// requires authentication:</span>
+<span class="nx">tw</span><span class="p">(</span><span class="s1">&#39;statuses/update&#39;</span><span class="p">).</span><span class="nx">post</span><span class="p">({</span><span class="nx">status</span><span class="o">:</span> <span class="nx">message</span><span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">json</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>OAuth authentication parameters are already included. You can authenticate by using callbacks,
+connect middleware, or out-of-band modes when available:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">tw</span><span class="p">.</span><span class="nx">startOAuth</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Visit:&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span>
+    <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./examples/utils&#39;</span><span class="p">).</span><span class="nx">ask</span><span class="p">(</span><span class="s2">&quot;Verification code: &quot;</span><span class="p">,</span> <span class="sr">/[\w\d]+/</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">verifier</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">tw</span><span class="p">.</span><span class="nx">completeOAuth</span><span class="p">(</span><span class="nx">verifier</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// Authenticated calls with the Twitter API can be done here.</span>
+        <span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">})</span>
+</code></pre>
+</div>
+
+<p>You can also define and load your own manifests for your own APIs:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">rem</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="nx">base</span><span class="o">:</span> <span class="s1">&#39;http://cozy.api/v1&#39;</span><span class="p">},</span> <span class="p">{</span><span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<h3>Examples</h3>
+
+<p>Any example in the examples folder can be run from the command line:</p>
+
+<pre><code>coffee examples/dropbox
+</code></pre>
+
+<p>For authentication, create a file called <code>examples/keys.json</code> with your
+API keys and secrets, of the following format:</p>
+
+<pre><code>{&quot;tumblr&quot;: {&quot;key&quot;: &quot;KEY&quot;, &quot;secret&quot;: &quot;SECRET&quot;}, &quot;twitter&quot;: ...}
+</code></pre>
+
+<h2>License</h2>
+
+<p>REM is MIT licensed.</p>
+
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages<br>Based on a Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
