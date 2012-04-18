@@ -3,7 +3,7 @@
     "name": "Facebook",
 
     "base": "https://graph.facebook.com",
-    "postType": "form",
+    "uploadFormat": "form",
 
     "auth": {
       "oauth": {

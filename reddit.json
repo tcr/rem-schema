@@ -4,8 +4,7 @@
     "docs": "https://github.com/reddit/reddit/wiki/API",
 
     "base": "http://www.reddit.com",
-    "postType": "form",
-    "robotsTxt": false,
+    "uploadFormat": "form",
 
     "formats": {
       "xml": {"suffix": ".xml"},

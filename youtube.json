@@ -6,7 +6,7 @@
     "params": {
       "v": "2"
     },
-    "keyAsParam": "key",
+    "configParams": {"key": "key"},
 
     "formats": {
       "xml": {},

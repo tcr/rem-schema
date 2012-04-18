@@ -4,7 +4,7 @@
     "docs": "https://dev.twitter.com/docs",
 
     "base": [["^/search", "https://search.twitter.com"], "https://api.twitter.com/1"],
-    "postType": "form",
+    "uploadFormat": "form",
 
     "formats": {
       "xml": {"suffix": ".xml"},
