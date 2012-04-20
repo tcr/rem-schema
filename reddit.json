@@ -12,9 +12,8 @@
     },
 
     "auth": {
-      "session": {
-        "cookies": ["reddit_session"]
-      }
+      "type": "cookies",
+      "cookies": ["reddit_session"]
     }
   }
 }

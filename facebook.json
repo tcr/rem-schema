@@ -3,19 +3,19 @@
     "name": "Facebook",
 
     "base": "https://graph.facebook.com",
+    
     "uploadFormat": "form",
 
     "auth": {
-      "oauth": {
-        "version": "2.0",
-        "base": "https://graph.facebook.com",
-        "params": {
-          "scope": ["email", "read_stream"],
-          "display": "page"
-        },
-        "scopeSeparator": ",",
-        "validate": "/me"
-      }
+      "type": "oauth",
+      "version": "2.0",
+      "base": "https://graph.facebook.com",
+      "params": {
+        "scope": ["email", "read_stream"],
+        "display": "page"
+      },
+      "scopeSeparator": ",",
+      "validate": "/me"
     }
   }
 }

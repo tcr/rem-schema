@@ -12,18 +12,17 @@
     },
 
     "auth": {
-      "oauth": {
-        "version": "1.0A",
-        "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
-        "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
-        "authorizeEndpoint": "https://www.google.com/accounts/OAuthAuthorizeToken",
-        "params": {
-          "scope": ["https://docs.google.com/feeds/", "https://docs.googleusercontent.com/", "https://spreadsheets.google.com/feeds/"]
-        },
-        "scopeSeparator": " ",
-        "validate": "/metadata/default",
-        "oob": true
-      }
+      "type": "oauth",
+      "version": "1.0A",
+      "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
+      "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
+      "authorizeEndpoint": "https://www.google.com/accounts/OAuthAuthorizeToken",
+      "params": {
+        "scope": ["https://docs.google.com/feeds/", "https://docs.googleusercontent.com/", "https://spreadsheets.google.com/feeds/"]
+      },
+      "scopeSeparator": " ",
+      "validate": "/metadata/default",
+      "oob": true
     }
   }
 }

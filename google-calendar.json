@@ -15,18 +15,17 @@
     },
 
     "auth": {
-      "oauth": {
-        "version": "1.0A",
-        "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
-        "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
-        "authorizeEndpoint": "https://www.google.com/accounts/OAuthAuthorizeToken",
-        "params": {
-          "scope": ["http://www.google.com/calendar/feeds"]
-        },
-        "scopeSeparator": " ",
-        "validate": "/default/owncalendars/full",
-        "oob": true
-      }
+      "type": "oauth",
+      "version": "1.0A",
+      "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
+      "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
+      "authorizeEndpoint": "https://www.google.com/accounts/OAuthAuthorizeToken",
+      "params": {
+        "scope": ["http://www.google.com/calendar/feeds"]
+      },
+      "scopeSeparator": " ",
+      "validate": "/default/owncalendars/full",
+      "oob": true
     }
   }
 }

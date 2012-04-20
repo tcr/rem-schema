@@ -9,15 +9,14 @@
     ],
 
     "auth": {
-      "oauth": {
-        "version": "1.0",
-        "requestEndpoint": "https://api.dropbox.com/1/oauth/request_token",
-        "accessEndpoint": "https://api.dropbox.com/1/oauth/access_token",
-        "authorizeEndpoint": "https://www.dropbox.com/1/oauth/authorize",
-        "validate": "/account/info",
-        "oob": true,
-        "oobVerifier": false
-      }
+      "type": "oauth",
+      "version": "1.0",
+      "requestEndpoint": "https://api.dropbox.com/1/oauth/request_token",
+      "accessEndpoint": "https://api.dropbox.com/1/oauth/access_token",
+      "authorizeEndpoint": "https://www.dropbox.com/1/oauth/authorize",
+      "validate": "/account/info",
+      "oob": true,
+      "oobVerifier": false
     }
   }
 }
