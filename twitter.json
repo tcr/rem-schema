@@ -17,9 +17,10 @@
       "requestEndpoint": "https://api.twitter.com/oauth/request_token",
       "accessEndpoint": "https://api.twitter.com/oauth/access_token",
       "authorizeEndpoint": "https://api.twitter.com/oauth/authorize",
-      "emptyCallback": "oob",
       "validate": "/account/verify_credentials",
-      "oob": true
+      "oob": true,
+      "oobVerifier": true,
+      "oobCallback": "oob"
     }
   }
 }
