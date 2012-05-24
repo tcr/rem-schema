@@ -5,6 +5,7 @@
     "base": "https://api.github.com",
 
     "uploadFormat": "json",
+    "cors": true,
 
     "auth": {
       "type": "oauth",
