@@ -1,6 +1,7 @@
 {
   "2": {
     "name": "Youtube",
+    "register": "https://code.google.com/apis/console/",
 
     "base": "https://gdata.youtube.com/feeds/api",
     "params": {

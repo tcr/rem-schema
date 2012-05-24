@@ -1,6 +1,6 @@
 # REM: REST easy.
 
-*VERSION: 0.2.0*
+*VERSION: 0.3.0*
 
 This is the common repository for all REM implementations. It contains
 several default manifests for various popular REST APIs.
