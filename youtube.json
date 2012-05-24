@@ -6,7 +6,7 @@
     "params": {
       "v": "2"
     },
-    "configParams": {"key": "key"},
+    "configParams": {"key": "devkey"},
 
     "formats": {
       "xml": {},
@@ -15,15 +15,18 @@
 
     "auth": {
       "type": "oauth",
-      "version": "1.0",
-      "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
-      "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
-      "authorizeEndpoint": "http://www.youtube.com/oauth_authorize_token",
-      "emptyCallback": "oob",
+      "version": "2.0",
+      "base": "https://accounts.google.com/o",
+      "authorizePath": "/oauth2/auth",
+      "tokenPath": "/oauth2/token",
       "params": {
-        "scope": ["http://gdata.youtube.com"]
+        "scope": ["http://gdata.youtube.com"],
+        "response_type": "code"
       },
-      "scopeSeparator": " "
+      "scopeSeparator": " ",
+      "oob": true,
+      "oobVerifier": true,
+      "oobCallback": "urn:ietf:wg:oauth:2.0:oob"
     }
   }
 }

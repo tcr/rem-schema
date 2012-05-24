@@ -10,6 +10,8 @@
       "type": "oauth",
       "version": "2.0",
       "base": "https://graph.facebook.com",
+      "authorizePath": "/oauth/authorize",
+      "tokenPath": "/oauth/access_token",
       "params": {
         "scope": ["email", "read_stream"],
         "display": "page"
