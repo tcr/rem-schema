@@ -22,7 +22,8 @@
       },
       "scopeSeparator": " ",
       "validate": "/metadata/default",
-      "oob": true
+      "oob": true,
+      "oobVerifier": true
     }
   }
 }
