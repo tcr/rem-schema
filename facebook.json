@@ -1,6 +1,8 @@
 {
   "1": {
     "name": "Facebook",
+    "docs": "https://developers.facebook.com/",
+    "control": "https://developers.facebook.com/apps",
 
     "base": "https://graph.facebook.com",
     
