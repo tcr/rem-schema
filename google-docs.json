@@ -1,6 +1,7 @@
 {
   "3": {
     "name": "Google Docs",
+    "register": "https://code.google.com/apis/console/",
 
     "base": "https://docs.google.com/feeds",
     "params": {
@@ -13,17 +14,19 @@
 
     "auth": {
       "type": "oauth",
-      "version": "1.0A",
-      "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
-      "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
-      "authorizeEndpoint": "https://www.google.com/accounts/OAuthAuthorizeToken",
+      "version": "2.0",
+      "base": "https://accounts.google.com/o",
+      "authorizePath": "/oauth2/auth",
+      "tokenPath": "/oauth2/token",
       "params": {
-        "scope": ["https://docs.google.com/feeds/", "https://docs.googleusercontent.com/", "https://spreadsheets.google.com/feeds/"]
+        "scope": ["https://docs.google.com/feeds/", "https://docs.googleusercontent.com/", "https://spreadsheets.google.com/feeds/"],
+        "response_type": "code"
       },
-      "scopeSeparator": " ",
       "validate": "/metadata/default",
+      "scopeSeparator": " ",
       "oob": true,
-      "oobVerifier": true
+      "oobVerifier": true,
+      "oobCallback": "urn:ietf:wg:oauth:2.0:oob"
     }
   }
 }

@@ -1,31 +1,30 @@
 {
-  "2": {
+  "3": {
     "name": "Google Calendar",
-    "docs": "http://code.google.com/apis/calendar/data/2.0/developers_guide_protocol.html",
+    "register": "https://code.google.com/apis/console/",
+    "docs": "https://developers.google.com/google-apps/calendar/",
 
-    "base": "https://www.google.com/calendar/feeds",
+    "base": "https://www.googleapis.com/calendar/v3",
     "params": {
-      "v": "2",
-      "alt": "jsonc"
+      "v": "3"
     },
-
-    "formats": {
-      "xml": {},
-      "json": {"params": {"alt": "jsonc"}}
-    },
+    "configParams": {"key": "key"},
 
     "auth": {
       "type": "oauth",
-      "version": "1.0A",
-      "requestEndpoint": "https://www.google.com/accounts/OAuthGetRequestToken",
-      "accessEndpoint": "https://www.google.com/accounts/OAuthGetAccessToken",
-      "authorizeEndpoint": "https://www.google.com/accounts/OAuthAuthorizeToken",
+      "version": "2.0",
+      "base": "https://accounts.google.com/o",
+      "authorizePath": "/oauth2/auth",
+      "tokenPath": "/oauth2/token",
       "params": {
-        "scope": ["http://www.google.com/calendar/feeds"]
+        "scope": ["http://www.google.com/calendar/feeds"],
+        "response_type": "code"
       },
+      "validate": "/users/me/calendarList",
       "scopeSeparator": " ",
-      "validate": "/default/owncalendars/full",
-      "oob": true
+      "oob": true,
+      "oobVerifier": true,
+      "oobCallback": "urn:ietf:wg:oauth:2.0:oob"
     }
   }
 }
