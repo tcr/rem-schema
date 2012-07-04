@@ -1,8 +1,8 @@
 {
   "3": {
     "name": "Google Calendar",
-    "register": "https://code.google.com/apis/console/",
     "docs": "https://developers.google.com/google-apps/calendar/",
+    "control": "https://code.google.com/apis/console/",
 
     "base": "https://www.googleapis.com/calendar/v3",
     "params": {

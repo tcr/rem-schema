@@ -1,6 +1,8 @@
 {
   "1": {
     "name": "Github",
+    "docs": "http://developer.github.com/v3/",
+    "control": "https://github.com/settings/applications",
 
     "base": "https://api.github.com",
 
